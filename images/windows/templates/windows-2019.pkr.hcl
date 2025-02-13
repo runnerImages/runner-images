@@ -26,6 +26,11 @@ variable "azure_tags" {
   default = {}
 }
 
+variable "build_key_vault_name" {
+  type    = string
+  default = "${env("BUILD_KEY_VAULT_NAME")}"
+}
+
 variable "build_resource_group_name" {
   type    = string
   default = "${env("BUILD_RESOURCE_GROUP_NAME")}"
